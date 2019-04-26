@@ -11,8 +11,11 @@ export class DeseosService {
   constructor() {
     const lista1 = new Lista('Recolectar Piebras del Infinito');
     const lista2 = new Lista('Heroes a Desaparecer');
-
     this.listas.push(lista1, lista2);
-    console.log(this.listas);
+  }
+
+  crearLista(titulo: string){
+    const nuevaLista = new Lista(titulo);
+    this.listas.push(nuevaLista);
   }
 }
